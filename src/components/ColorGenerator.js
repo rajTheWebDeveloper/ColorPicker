@@ -21,12 +21,12 @@ const ColorGenerator = () => {
             if(input.includes("#"))
             {
                 setColors(new Values(input).all(10));
-                notifyClick(input.charAt(0).toUpperCase()+input.slice(1)+" Shades Generated")
+                notifyClick(input.charAt(0).toUpperCase()+" Shades Generated")
             }
             else 
             {
                 setColors(new Values("#" + input).all(10))
-                notifyClick(`#${input}`.toUpperCase()+input.slice(1) + " Shades Generated");
+                notifyClick(`#${input}`.toUpperCase() + " Shades Generated");
             }
         }
         catch(e)
