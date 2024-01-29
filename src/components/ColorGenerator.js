@@ -55,7 +55,7 @@ const ColorGenerator = () => {
 
       return (
         <section>
-          <section className="bg-gray-50 w-[100vw] h-[25vh] px-10 flex justify-center items-center flex-col md:px-20 md:flex-row md:justify-start">
+          <section className="bg-gray-50 w-[100vw] h-[25vh] px-6 flex justify-center items-center flex-col md:px-20 md:flex-row md:justify-start">
             <h2 className="text-xl tracking-wider md:mr-8">Color Generator</h2>
             <div className="tags flex items-center h-[35px] my-4">
               {console.log(colorPicker)}
@@ -77,7 +77,7 @@ const ColorGenerator = () => {
                 value={input}
                 role="text-box"
                 onChange={(e) => setInput(e.target.value)}
-                className="h-[100%] w-[70%] md:w-[100%] px-2 md:px-3 outline-none text-sm rounded-l-sm border-[2px] border-white focus:border-blue-400"
+                className="h-[100%] w-[60%] md:w-[100%] px-2 md:px-3 outline-none text-sm rounded-l-sm border-[2px] border-white focus:border-blue-400"
               />
               <button
                 role="submit"
