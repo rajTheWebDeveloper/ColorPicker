@@ -11,10 +11,7 @@ const ColorGenerator = () => {
     let [colorPicker,setColorPicker]=useState("#FF00FF")
     let [colors, setColors] = useState(new Values("#FF00FF").all(10))
 
-
      const notify = (msg) => toast(msg.toUpperCase() + " Copied");
-
-
 
     let handleClick=()=>
     {
@@ -50,13 +47,11 @@ const ColorGenerator = () => {
         }
     }
 
-
     let copyToClipboard=(text)=>
     {
         navigator.clipboard.writeText("#"+text)
         notify("#" + text);
     }
-
 
       return (
         <section>
@@ -65,7 +60,7 @@ const ColorGenerator = () => {
             <div className="tags flex items-center h-[35px] my-4">
               {console.log(colorPicker)}
               <label
-                className={`color-picker h-[100%] w-[80px] flex items-center cursor-pointer`}
+                className={`color-picker h-[100%] w-[60px] md:w-[120px] flex items-center cursor-pointer`}
                 style={{ backgroundColor: colorPicker }}
                 htmlFor="color-picker"
               ></label>
@@ -80,19 +75,20 @@ const ColorGenerator = () => {
               <input
                 type="text"
                 value={input}
-                role='text-box'
+                role="text-box"
                 onChange={(e) => setInput(e.target.value)}
-                className="h-[100%] px-3 outline-none text-sm rounded-l-sm border-[2px] border-white focus:border-blue-400"
+                className="h-[100%] w-[50%] md:w-[100%] px-2 md:px-3 outline-none text-sm rounded-l-sm border-[2px] border-white focus:border-blue-400"
               />
-              <button role='submit' onClick={handleClick} className="h-[100%] bg-black text-white px-4 rounded-r-md text-sm">
+              <button
+                role="submit"
+                onClick={handleClick}
+                className="h-[100%] bg-black text-white px-4 rounded-r-md text-sm"
+              >
                 Submit
               </button>
             </div>
           </section>
-          <Shades
-            colors={colors}
-            copyToClipboard={copyToClipboard}
-          />
+          <Shades colors={colors} copyToClipboard={copyToClipboard} />
         </section>
       );
 }

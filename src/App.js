@@ -4,7 +4,7 @@ import ColorGenerator from './components/ColorGenerator';
 
 function App() {
   return (
-    <div className="App w-[100vw] h-screen overflow-x-hidden">
+    <div className="App w-[100vw] h-screen overflow-x-hidden bg-gray-50">
       <ColorGenerator/>
     </div>
   )
