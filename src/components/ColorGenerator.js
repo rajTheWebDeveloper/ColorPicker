@@ -77,7 +77,7 @@ const ColorGenerator = () => {
                 value={input}
                 role="text-box"
                 onChange={(e) => setInput(e.target.value)}
-                className="h-[100%] w-[60%] md:w-[100%] px-2 md:px-3 outline-none text-sm rounded-l-sm border-[2px] border-white focus:border-blue-400"
+                className="h-[100%] w-[70%] md:w-[100%] px-2 md:px-3 outline-none text-sm rounded-l-sm border-[2px] border-white focus:border-blue-400"
               />
               <button
                 role="submit"
