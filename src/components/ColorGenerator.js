@@ -55,8 +55,8 @@ const ColorGenerator = () => {
 
       return (
         <section>
-          <section className="bg-gray-50 w-[100vw] h-[25vh] px-10 flex justify-center items-center flex-col md:px-20  md:flex-row md:items-center md:justify-start">
-            <h2 className="text-xl tracking-wider mr-8">Color Generator</h2>
+          <section className="bg-gray-50 w-[100vw] h-[25vh] px-10 flex justify-center items-center flex-col md:px-20 md:flex-row md:justify-start">
+            <h2 className="text-xl tracking-wider md:mr-8">Color Generator</h2>
             <div className="tags flex items-center h-[35px] my-4">
               {console.log(colorPicker)}
               <label
