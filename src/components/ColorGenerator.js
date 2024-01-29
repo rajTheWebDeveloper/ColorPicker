@@ -12,6 +12,7 @@ const ColorGenerator = () => {
     let [colors, setColors] = useState(new Values("#FF00FF").all(10))
 
      const notify = (msg) => toast(msg.toUpperCase() + " Copied");
+     const notifyClick = (msg) => toast(msg);
 
     let handleClick=()=>
     {
@@ -20,10 +21,12 @@ const ColorGenerator = () => {
             if(input.includes("#"))
             {
                 setColors(new Values(input).all(10));
+                notifyClick(input.charAt(0).toUpperCase()+input.slice(1)+" Shades Generated")
             }
             else 
             {
-                setColors(new Values("#" + input).all(10));
+                setColors(new Values("#" + input).all(10))
+                notifyClick(`#${input}`.toUpperCase()+input.slice(1) + " Shades Generated");
             }
         }
         catch(e)
